@@ -1,12 +1,15 @@
-# React + Vite
+# TempMail Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **temporary email service** built with Node.js, Express, React, and Tailwind CSS. This app allows users to generate disposable email addresses, receive messages (with attachments), and manage them in a modern interface.
 
-Currently, two official plugins are available:
+## Features
+- **Generate Temp Emails**: Instantly create and store a new email address.
+- **Inbox Management**: View, refresh, and delete messages.
+- **Attachment Support**: Download or preview common file types (images, PDFs, etc.).
+- **Local Storage**: Persist the current email and messages between sessions.
+- **Responsive UI**: Built with Tailwind CSS for a clean, modern look.
+- **Easy Deployment**: Deploy on Vercel or Heroku with a single click.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+- **Backend**: Node.js, Express
+- **Frontend**: React, Tailwind CSS
