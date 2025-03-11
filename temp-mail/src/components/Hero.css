@@ -1,0 +1,171 @@
+@keyframes loading {
+    0% {
+        width: 5%;
+    }
+
+    50% {
+        width: 70%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.loading-bar {
+    animation: loading 1s ease-in-out forwards;
+}
+
+@media (max-width: 680px) {
+
+    header {
+        margin-bottom: 1rem !important;
+    }
+
+    h1 {
+        font-size: 2.5rem !important;
+        letter-spacing: 5px !important;
+    }
+
+    header p {
+        font-size: 1rem !important;
+    }
+
+    .bg-gray-800:first-child {
+        padding: 1rem !important;
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+
+    input {
+        font-size: 0.875rem !important;
+    }
+
+    .MdEmail {
+        left: 0.5rem !important;
+    }
+
+    .IoCopy,
+    .SiTicktick {
+        right: 0.5rem !important;
+    }
+
+    button {
+        font-size: 0.875rem !important;
+        width: 100% !important;
+    }
+
+    .bg-gray-800:nth-child(2) {
+        padding: 1rem !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+
+    ul {
+        min-height: 150px !important;
+    }
+
+    li {
+        padding: 0.75rem !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    .flex {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+    }
+
+    .inbox {
+        flex-direction: row !important;
+
+    }
+
+    .ml-4 {
+        margin-left: 0 !important;
+        margin-top: 0.5rem !important;
+    }
+
+    .inline-flex {
+        padding: 0.25rem 0.75rem !important;
+        font-size: 0.625rem !important;
+        min-width: 2.5rem !important;
+        text-align: center !important;
+    }
+
+    .MdDelete {
+        position: static !important;
+        margin-top: 0.5rem !important;
+        font-size: 1.5rem !important;
+    }
+
+    h3 {
+        font-size: 1rem !important;
+        line-clamp: 2 !important;
+        -webkit-line-clamp: 2 !important;
+        overflow: hidden !important;
+        display: -webkit-box !important;
+        -webkit-box-orient: vertical !important;
+    }
+
+    p {
+        font-size: 0.75rem !important;
+        line-clamp: 1 !important;
+        -webkit-line-clamp: 1 !important;
+        overflow: hidden !important;
+        display: -webkit-box !important;
+        -webkit-box-orient: vertical !important;
+    }
+
+    .msg {
+        top: 1rem !important;
+        width: 90% !important;
+        padding: 0.5rem 1rem !important;
+        font-size: 0.875rem !important;
+    }
+
+    .loading-bar {
+        height: 0.75px !important;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .min-h-screen {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem !important;
+        letter-spacing: 3px !important;
+    }
+
+    input {
+        font-size: 0.75rem !important;
+    }
+
+    button {
+        font-size: 0.75rem !important;
+    }
+
+    h2 {
+        font-size: 1.25rem !important;
+    }
+
+    .fixed {
+        width: 95% !important;
+        font-size: 0.75rem !important;
+    }
+
+    h3 {
+        font-size: 0.875rem !important;
+    }
+
+    p {
+        font-size: 0.625rem !important;
+    }
+}

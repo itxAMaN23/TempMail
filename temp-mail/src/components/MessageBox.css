@@ -1,0 +1,12 @@
+@media (max-width: 600px) {
+
+    .attachments {
+        display: -webkit-box !important;
+        -webkit-box-orient: horizontal !important;
+    }
+
+    .attachments svg {
+        margin: auto 0;
+    }
+
+}
