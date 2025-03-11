@@ -1,4 +1,5 @@
-import { React, useEffect, useState } from 'react';
+import React from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import MessageBox from './MessageBox';
 import { IoCopy } from "react-icons/io5";
@@ -25,11 +26,11 @@ const Hero = () => {
     const [showToast, setShowToast] = useState(false);
 
     useEffect(() => {
-        setLoading(true);
         const storedEmail = localStorage.getItem('email');
         const storedToken = localStorage.getItem('authToken');
-
+        
         if (storedEmail && storedToken) {
+            setLoading(true);
             setEmail(storedEmail);
 
             const fetchInitialMessages = async () => {
