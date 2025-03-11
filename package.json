@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "axios": "^1.8.1",
+    "axios": "^1.8.2",
     "Buffer": "^0.0.0",
     "cors": "^2.8.5",
     "dompurify": "^3.2.4",
