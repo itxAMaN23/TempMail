@@ -330,7 +330,7 @@ const MessageBox = ({ message, onClose }) => {
 
     return (
         <>
-            <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+            <div className="msgbox fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4">
                 <div className="bg-gray-900 rounded-xl shadow-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto border border-gray-700/50 flex flex-col">
 
                     <div className="p-6 border-b border-gray-800">
@@ -357,8 +357,8 @@ const MessageBox = ({ message, onClose }) => {
                         </h2>
                     </div>
                     <div className="flex-1 p-4 m-1 flex flex-col max-[400px]:p-1 max-[400px]:m-0">
-                        <div className="text-gray-200 prose prose-invert w-full flex-1 max-[400px]:text-sm max-[400px]:prose-sm">
-                            <div className="content bg-gray-800/50 rounded-lg p-4 shadow-inner flex flex-col h-full max-[400px]:p-2 max-[400px]:rounded max-[400px]:w-[90%] max-[400px]:m-auto max-[400px]:text-xs">
+                        <div className="text-gray-200 prose prose-invert w-full flex-1 max-[400px]:text-sm max-[400px]:prose-sm overflow-auto">
+                            <div className="content bg-gray-800/50 rounded-lg p-4 shadow-inner flex flex-col h-full max-[400px]:p-2 max-[400px]:rounded max-[400px]:m-auto max-[400px]:text-xs max-[400px]:w-[500px]">
                                 <div className="w-full h-full overflow-auto break-words whitespace-normal" dangerouslySetInnerHTML={{ __html: htmlContent }} />
                             </div>
                         </div>
@@ -378,8 +378,8 @@ const MessageBox = ({ message, onClose }) => {
                                             <div className={`w-10 h-10 rounded ${fileInfo.color} flex items-center justify-center mr-3 max-[680px]:mr-0`}>
                                                 {fileInfo.icon}
                                             </div>
-                                            <div className="flex-1 max-w-[-webkit-fill-available] text-center">
-                                                <p className="font-medium text-gray-200 truncate">{attachment.filename}</p>
+                                            <div className="flex-1 max-w-[-webkit-fill-available]">
+                                                <p className="filename font-medium text-gray-200 truncate max-[680px]: text-wrap max-[680px]:text-center">{attachment.filename}</p>
                                                 <div className="flex items-center gap-3">
                                                     <span className="text-xs text-gray-400">{formatFileSize(attachment.size)}</span>
                                                     <span className={`text-xs px-2 py-0.5 rounded-full ${fileInfo.color} text-white`}>

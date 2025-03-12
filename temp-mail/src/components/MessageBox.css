@@ -9,4 +9,11 @@
         margin: auto 0;
     }
 
+    .msgbox p {
+        line-clamp: unset !important;
+        -webkit-line-clamp: none !important;
+        overflow: auto !important;
+        text-wrap: wrap;
+    }
+
 }

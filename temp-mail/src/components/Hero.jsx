@@ -28,10 +28,12 @@ const Hero = () => {
     useEffect(() => {
         const storedEmail = localStorage.getItem('email');
         const storedToken = localStorage.getItem('authToken');
-        
+
         if (storedEmail && storedToken) {
             setLoading(true);
+            setMessagesLoading(true);
             setEmail(storedEmail);
+            setLoading(false);
 
             const fetchInitialMessages = async () => {
                 try {
@@ -43,7 +45,7 @@ const Hero = () => {
                 } catch (error) {
                     setMessagesError(error.message || 'An error occurred while fetching messages.');
                 } finally {
-                    setLoading(false);
+                    setMessagesLoading(false);
                 }
             };
 
@@ -197,13 +199,13 @@ const Hero = () => {
             )}
 
             {(loading || messagesLoading) && (
-                <div className="fixed top-0 left-0 h-1 bg-blue-600 loading-bar rounded-full pointer-events-none"></div>
+                <div className="fixed top-0 left-0 h-1 bg-blue-600 loading-bar rounded-full pointer-events-none z-1001"></div>
             )}
 
             <div className="min-h-screen bg-gray-900 flex items-center justify-center p-[5rem] transition-colors duration-500" style={{ "fontFamily": "Montserrat" }}>
 
                 <div className="w-full max-w-3xl">
-                    
+
                     <header className="text-center mb-12">
                         <h1 className="text-6xl font-bold text-white mb-4 transition-colors duration-300 hover:text-gray-300 tracking-[10px]" style={{ "fontFamily": "Bebas Neue" }}>
                             TempMail Generator
@@ -251,7 +253,7 @@ const Hero = () => {
                         <div className="bg-gray-800 rounded-lg shadow-lg p-8 transition-shadow duration-300 hover:shadow-2xl">
                             <div className="inbox flex items-center justify-between mb-6">
                                 <h2 className="text-3xl font-semibold text-white">
-                                    Inbox
+                                    Inbox (<span className='text-sm'>{messages.length}</span>)
                                 </h2>
                                 <div className="space-x-2">
                                     <button onClick={getMsgs} className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md transition-all duration-300">
