@@ -110,7 +110,6 @@ const Hero = () => {
                 }
             });
 
-            // Mark message as read before showing it
             await axios.patch(`${BACKEND_URL}/api/mail/messages/${messageId}/read`, { seen: true }, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('authToken')}`,
@@ -118,7 +117,6 @@ const Hero = () => {
                 }
             });
 
-            // Update messages state to reflect the change
             setMessages(messages.map(msg => msg.id === messageId ? { ...msg, seen: true } : msg));
             setSelectedMessage(response.data); // Store the full message details
         } catch (error) {
@@ -131,11 +129,11 @@ const Hero = () => {
     };
 
     const handleMessageClick = (message) => {
-        fetchMessageById(message.id); // Fetch the full message by ID
+        fetchMessageById(message.id);
     };
 
     const closeMessageBox = () => {
-        setSelectedMessage(null); // Close the modal
+        setSelectedMessage(null);
     };
 
     const handleCopy = () => {
@@ -252,8 +250,8 @@ const Hero = () => {
                     <section>
                         <div className="bg-gray-800 rounded-lg shadow-lg p-8 transition-shadow duration-300 hover:shadow-2xl">
                             <div className="inbox flex items-center justify-between mb-6">
-                                <h2 className="text-3xl font-semibold text-white">
-                                    Inbox (<span className='text-sm'>{messages.length}</span>)
+                                <h2 className="text-3xl font-semibold text-white p-2">
+                                    Inbox <span className='text-md'>( {messages.length} )</span>
                                 </h2>
                                 <div className="space-x-2">
                                     <button onClick={getMsgs} className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md transition-all duration-300">
